@@ -1,0 +1,8 @@
+{
+  "watch": ["src"],
+  "ignore": ["src/**/*.unit.ts", "test", "node_modules", "dist"],
+  "ext": "ts",
+  "exec": "tsx src/server.ts",
+  "delay": "300ms",
+  "verbose": true
+}

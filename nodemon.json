@@ -4,5 +4,5 @@
   "ext": "ts",
   "exec": "tsx src/server.ts",
   "delay": "300ms",
-  "verbose": true
+  "verbose": false
 }

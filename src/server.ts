@@ -1,17 +1,8 @@
 import createApp from "./app";
-import dotenv from "dotenv";
-
-dotenv.config({ quiet: true });
-
-const port =
-  process.env.Port ||
-  (() => {
-    console.log("Env port not set using 3000");
-    return 3000;
-  })();
+import { env } from "./config/env";
 
 const app = createApp();
 
-app.listen(port, () => {
-  console.log(`Server running on: http://localhost:${port}`);
+app.listen(env.serverPort, () => {
+  console.log(`Server running ${env.serverPort}`);
 });

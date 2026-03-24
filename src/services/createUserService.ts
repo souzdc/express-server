@@ -1,11 +1,11 @@
-import { v4 as uuidv4 } from 'uuid';
-import { createUser } from '../repositories/userRepository';
-import { User } from '../types/user';
+import { v4 as uuidv4 } from "uuid";
+import { createUser } from "../repositories/userRepository";
+import { User } from "../types/user";
 
 interface CreateUserDTO {
-  name: string,
-  email: string,
-  password: string
+  name: string;
+  email: string;
+  password: string;
 }
 
 export const createUserService = async (data: CreateUserDTO): Promise<User> => {
@@ -19,10 +19,10 @@ export const createUserService = async (data: CreateUserDTO): Promise<User> => {
     id: uuidv4(),
     name,
     email,
-    password
-  }
+    password,
+  };
 
   const createdUser = await createUser(user);
 
   return createdUser;
-}
+};

@@ -21,4 +21,4 @@ export const listUsers = async (): Promise<User[]> => {
 
   const result = await pool.query(query);
   return result.rows;
-}
+};

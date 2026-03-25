@@ -11,3 +11,14 @@ export const createUser = async (user: User): Promise<User> => {
   const result = await pool.query(query, values);
   return result.rows[0];
 };
+
+export const listUsers = async (): Promise<User[]> => {
+  const query = `
+    SELECT id, name, email, passowrd
+    FROM users
+    ORDER BY name
+  `;
+
+  const result = await pool.query(query);
+  return result.rows;
+}
